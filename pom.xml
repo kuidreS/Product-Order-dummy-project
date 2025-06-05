@@ -33,7 +33,6 @@
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -107,7 +106,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>src/docs/asciidoc</sourceDirectory>
+                            <sourceDirectory>src/docs/REST docs</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-docs</outputDirectory>
                             <attributes>
                                 <snippets>${project.build.directory}/generated-snippets</snippets>

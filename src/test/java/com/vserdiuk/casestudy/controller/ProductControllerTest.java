@@ -5,7 +5,6 @@ import com.vserdiuk.casestudy.dto.CreateProductDTO;
 import com.vserdiuk.casestudy.dto.ProductDTO;
 import com.vserdiuk.casestudy.dto.UpdateProductDTO;
 import com.vserdiuk.casestudy.service.ProductService;
-import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
