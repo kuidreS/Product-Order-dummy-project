@@ -1,0 +1,18 @@
+@startuml
+start
+:Extract product IDs from CreateOrderDTO;
+:Fetch products with lock;
+:Validate stock availability;
+if (Stock valid?) then (yes)
+    :Create new order;
+    :Reserve stock and create order products;
+    :Save order and products;
+    :Schedule order expiration;
+    :Log order creation asynchronously;
+    :Return OrderDTO;
+else (no)
+    :Throw BusinessException;
+    stop
+endif
+stop
+@enduml

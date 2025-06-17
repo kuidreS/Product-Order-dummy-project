@@ -66,6 +66,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>8.0.1.Final</version> <!-- or compatible with Jakarta -->
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/jakarta.el/jakarta.el-api -->
+        <dependency>
+            <groupId>jakarta.el</groupId>
+            <artifactId>jakarta.el-api</artifactId>
+            <version>6.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -106,7 +117,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>src/docs/REST docs</sourceDirectory>
+                            <sourceDirectory>docs/REST docs</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-docs</outputDirectory>
                             <attributes>
                                 <snippets>${project.build.directory}/generated-snippets</snippets>

@@ -1,0 +1,46 @@
+@startuml
+entity "orders" {
+  * id : BIGINT <<PK>> <<auto_increment>>
+  --
+  status : VARCHAR <<not null>> <<enum: CREATED, PAID, CANCELLED, EXPIRED>>
+  created_at : DATETIME <<not null>>
+  paid_at : DATETIME
+  --
+  + idx_orders_status (status)
+  + idx_orders_created_at (created_at)
+}
+
+entity "products" {
+  * id : BIGINT <<PK>> <<auto_increment>>
+  --
+  name : VARCHAR <<not null>> <<unique>>
+  price : DECIMAL <<not null>>
+  stock_quantity : INTEGER <<not null>>
+  --
+  + idx_products_name (name)
+}
+
+entity "order_product" {
+  * id : BIGINT <<PK>> <<auto_increment>>
+  --
+  order_id : BIGINT <<FK>> <<not null>>
+  product_id : BIGINT <<FK>> <<not null>>
+  quantity : INTEGER <<not null>>
+  --
+  + idx_order_product_order_id (order_id)
+  + idx_order_product_product_id (product_id)
+}
+
+entity "order_expiration_tasks" {
+  * id : BIGINT <<PK>> <<auto_increment>>
+  --
+  orderId : BIGINT <<FK>> <<not null>>
+  expirationTime : DATETIME <<not null>>
+  status : VARCHAR <<not null>> <<enum: PENDING, SENT, FAILED>>
+}
+
+orders ||--o{ order_product
+products ||--o{ order_product
+orders ||--o{ order_expiration_tasks
+
+@enduml

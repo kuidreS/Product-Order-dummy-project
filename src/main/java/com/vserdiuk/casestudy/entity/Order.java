@@ -29,7 +29,7 @@ public class Order implements Serializable {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private OrderStatus status;
+    private OrderStatus status; // CREATED, PAID, CANCELLED, EXPIRED
 
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;

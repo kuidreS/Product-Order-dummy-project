@@ -1,0 +1,21 @@
+@startuml
+start
+:Execute with retry (up to MAX_RETRIES);
+:Validate order is in CREATED status;
+:Release reserved stock;
+:Set order status to CANCELLED;
+:Save order;
+:Log cancellation asynchronously;
+if (OptimisticLockException?) then (yes)
+    :Log retry attempt;
+    :Wait with exponential backoff;
+    if (Retries exhausted?) then (yes)
+        :Throw BusinessException;
+        stop
+    else (no)
+        :Retry operation;
+    endif
+else (no)
+    stop
+endif
+@enduml

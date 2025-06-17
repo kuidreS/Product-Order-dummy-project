@@ -1,0 +1,12 @@
+com.vserdiuk.casestudy
+com.vserdiuk.casestudy.config
+com.vserdiuk.casestudy.controller
+com.vserdiuk.casestudy.dto
+com.vserdiuk.casestudy.entity
+com.vserdiuk.casestudy.exception
+com.vserdiuk.casestudy.mapper
+com.vserdiuk.casestudy.messaging
+com.vserdiuk.casestudy.repository
+com.vserdiuk.casestudy.service
+com.vserdiuk.casestudy.service.impl
+com.vserdiuk.casestudy.validator

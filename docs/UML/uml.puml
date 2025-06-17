@@ -1,0 +1,18 @@
+@startuml
+class OrderController
+class ProductController
+interface OrderExpirationTaskRepository
+JpaRepository <|-- OrderExpirationTaskRepository
+interface OrderProductRepository
+JpaRepository <|-- OrderProductRepository
+interface OrderRepository
+JpaRepository <|-- OrderRepository
+interface ProductRepository
+JpaRepository <|-- ProductRepository
+class OrderServiceImpl
+OrderService <|.. OrderServiceImpl
+class ProductServiceImpl
+ProductService <|.. ProductServiceImpl
+interface OrderService
+interface ProductService
+@enduml

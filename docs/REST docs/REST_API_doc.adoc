@@ -1,0 +1,189 @@
+= Product Order API Documentation
+:toc:
+:toc-title: Table of Contents
+:sectnums:
+
+== Overview
+A scalable Spring Boot REST API for managing Products and Orders with real-time stock reservation, expiration handling (30 minutes), and Kafka-based messaging.
+
+Features:
+
+ * Create, update, delete, and list Products
+ * Create, cancel, and pay for Orders
+
+== Product API
+
+=== Create Product
+
+REST API endpoint for creating a Product
+
+=== CURL Request
+include::{snippets}/products/create/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/products/create/http-request.adoc[]
+
+=== Request Body
+include::{snippets}/products/create/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/products/create/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/products/create/response-body.adoc[]
+
+=== Create Products
+
+REST API endpoint for creating a list of Products
+
+=== CURL Request
+include::{snippets}/products/create-batch/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/products/create-batch/http-request.adoc[]
+
+=== Request Body
+include::{snippets}/products/create-batch/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/products/create-batch/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/products/create-batch/response-body.adoc[]
+
+=== Delete Product
+
+REST API endpoint for deleting a Product
+
+=== CURL Request
+include::{snippets}/products/delete/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/products/delete/http-request.adoc[]
+
+=== Request Body
+include::{snippets}/products/delete/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/products/delete/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/products/delete/response-body.adoc[]
+
+=== Delete Products
+
+REST API endpoint for deleting a list of Products
+
+=== CURL Request
+include::{snippets}/products/delete-batch/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/products/delete-batch/http-request.adoc[]
+
+=== Request Body
+include::{snippets}/products/delete-batch/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/products/delete-batch/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/products/delete-batch/response-body.adoc[]
+
+=== Get Product
+
+REST API endpoint for getting a Product
+
+=== CURL Request
+include::{snippets}/products/get/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/products/get/http-request.adoc[]
+
+=== Request Body
+include::{snippets}/products/get/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/products/get/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/products/get/response-body.adoc[]
+
+=== Get Products
+
+REST API endpoint for getting a list of Products
+
+=== CURL Request
+include::{snippets}/products/list/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/products/list/http-request.adoc[]
+
+=== Request Body
+include::{snippets}/products/list/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/products/list/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/products/list/response-body.adoc[]
+
+=== Update Product
+
+REST API endpoint for updating a Product
+
+=== CURL Request
+include::{snippets}/products/update/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/products/update/http-request.adoc[]
+
+=== Request Body
+include::{snippets}/products/update/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/products/update/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/products/update/response-body.adoc[]
+
+=== Update Products
+
+REST API endpoint for updating a list of Products
+
+=== CURL Request
+include::{snippets}/products/update-batch/curl-request.adoc[]
+
+=== HTTP Request
+include::{snippets}/products/update-batch/http-request.adoc[]
+
+=== Request Body
+include::{snippets}/products/update-batch/request-body.adoc[]
+
+=== HTTP Response
+include::{snippets}/products/update-batch/http-response.adoc[]
+
+=== Response Body
+include::{snippets}/products/update-batch/response-body.adoc[]
+
+== Order API
+
+=== Create Order
+
+REST API endpoint for creating an Order
+
+include::{snippets}/orders/create/http-request.adoc[]
+include::{snippets}/orders/create/http-response.adoc[]
+
+=== Pay Order
+
+REST API endpoint for paying for an Order
+
+include::{snippets}/orders/pay/http-request.adoc[]
+include::{snippets}/orders/pay/http-response.adoc[]
+
+=== Cancel Order
+
+REST API endpoint for canceling an Order
+
+include::{snippets}/orders/cancel/http-request.adoc[]
+include::{snippets}/orders/cancel/http-response.adoc[]

@@ -5,3 +5,5 @@ databaseChangeLog:
       file: db/changelog/changeset-002-create-orders.yaml
   - include:
       file: db/changelog/changeset-003-create-order-product.yaml
+  - include:
+      file: db/changelog/changeset-004-create-order-expiration-tasks.yaml
